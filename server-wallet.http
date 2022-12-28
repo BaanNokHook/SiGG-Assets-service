@@ -1,0 +1,38 @@
+@apiUrl = http://localhost:3020/api/assets
+
+### TOKEN LIST
+GET {{apiUrl}}/token
+
+
+### CREATE TOKEN
+POST {{apiUrl}}/token/create
+content-type: application/json
+
+{
+    "tokenName": "Test Token 01",
+    "tokenAbb": "TT01",
+    "tokenAddress": "0x123456789",
+    "tokenSymbol": "AAAAAAAA==",
+    "tokenStatus": true
+}
+
+### UPDATE TOKEN
+POST {{apiUrl}}/token/update
+content-type: application/json
+
+{
+    "_id": "63184b2a107a8661f1455578",
+    "tokenName": "Test Token 01",
+    "tokenAbb": "TT01",
+    "tokenAddress": "0x123456789",
+    "tokenSymbol": "qwerteq=="
+}
+
+### UPDATE TOKEN STATUS
+POST {{apiUrl}}/token/update/status
+content-type: application/json
+
+{
+    "_id": "63184b2a107a8661f1455578",
+    "tokenStatus": false
+}
